@@ -7,9 +7,15 @@ import { CgProfile } from "react-icons/cg";
 // import { AiFillPlusCircle } from 'react-icons/ai';
 import { MdArrowForwardIos, MdCancel } from "react-icons/md";
 import { BsFillBookFill } from "react-icons/bs";
-import React from "react";
+import { FaCarAlt } from "react-icons/fa";
+import React, { useState } from "react";
 import './Topbar.css';
 export default function Topbar() {
+    const [show, setShow] = useState(false)
+    const handleclick = (e) => {
+        setShow(!show)
+    };
+
     return (
         <>
             <div className="Topbar_header">
@@ -20,13 +26,13 @@ export default function Topbar() {
                     </div><h3>Company</h3>
 
                 </div>
-                <div className="Topbar_col2">
+                <div className="Topbar_col2" >
                     <ul>
                         <li>Dashboard</li>
                         <li>Account</li>
-                        <li>campaigns</li>
-                        <li>leads</li>
-                        <li>prospect</li>
+                        <div className="Tobar_col2_on" onClick={(e) => { handleclick(e) }}><li>leads</li></div>
+                        <div className="Tobar_col2_on1" onClick={(e) => { handleclick(e) }}><li>campaigns</li></div>
+                        <div className="Tobar_col2_on2" onClick={(e) => { handleclick(e) }}><li>prospect</li></div>
                         <li>
                             <BsThreeDots />
                         </li>
@@ -50,67 +56,96 @@ export default function Topbar() {
                     </div>
                 </div>
             </div>
-            <div className="Topbar_content">
-                <div className="Topbar_content_cola">
-                    <div className="Topbar_content_cola_list">
-                        <BsFillBookFill className="Topbar_bookicon" />
-                        <label> Leads</label>
-                    </div>
-                    <div className="Topbar_content_cola_list">
-                        <BsFillBookFill className="Topbar_bookicon" />
-                        <label> Campaign</label>
-                    </div>
-                    <div className="Topbar_content_cola_list">
-                        <BsFillBookFill className="Topbar_bookicon" />
-                        <label>Tasks</label>
-                    </div>
-                    <div className="Topbar_content_cola_list">
-                        <BsFillBookFill className="Topbar_bookicon" />
-                        <label>Prospects</label>
-                    </div>
-                    <div className="Topbar_content_cola_list1"></div>
-                    <div className="Topbar_content_cola_list1"></div>
-                    <div className="Topbar_content_cola_list1"></div>
-                    <div className="Topbar_content_cola_list1"></div>
-                    <div className="Topbar_content_cola_list1"></div>
-                </div>
-                <div className="Topbar_content_colb">
-                    <label className="Topbar_label_head">Leads</label>
-                    <div className="Topbar_content_colb_list">
-                        <div className="Topbar_content_colb_list1">
-                            <BsFillBookFill className="Topbar_bookicon" />
-                            <label>List Leads</label>
-                        </div>
-                        <div className="Topbar_content_colb_list1">
-                            <BsFillBookFill className="Topbar_bookicon" />
-                            <label>Create Lead</label>
-                        </div>
-                    </div>
-                </div>
-                <div className="Topbar_content_colc">
-                    <label className="Topbar_label_head">Campaign</label>
-                    <div className="Topbar_content_colb_list">
-                        <div className="Topbar_content_colb_list1">
-                            <BsFillBookFill className="Topbar_bookicon" />
-                            <label>List Campaign</label>
-                        </div>
-                        <div className="Topbar_content_colb_list1">
-                            <BsFillBookFill className="Topbar_bookicon" />
-                            <label>Create Campaign</label>
-                        </div>
-                    </div>
-                </div>
-                <div className="Topbar_content_cold">
-                    <label className="Topbar_label_head">Prospect</label>
-                    <div className="Topbar_content_colb_list">
-                        <div className="Topbar_content_colb_list1">
-                            <BsFillBookFill className="Topbar_bookicon" />
-                            <label>List Prospect</label>
+
+            {
+                show ? (
+
+                    <div className="Topbar_content">
+                        <div className="Topbar_content_cola">
+                            <div className="Topbar_content_cola_list">
+                                <BsFillBookFill className="Topbar_bookicon" />
+                                <label> Leads</label>
+                            </div>
+                            <div className="Topbar_content_cola_list">
+                                <BsFillBookFill className="Topbar_bookicon" />
+                                <label> Campaign</label>
+                            </div>
+                            <div className="Topbar_content_cola_list">
+                                <BsFillBookFill className="Topbar_bookicon" />
+                                <div className="Tobar_col2_Tasks" onClick={(e) => { handleclick(e) }}><label>Tasks</label></div>
+                            </div>
+                            <div className="Topbar_content_cola_list">
+                                <BsFillBookFill className="Topbar_bookicon" />
+                                <label>Prospects</label>
+                            </div>
+                            <div className="Topbar_content_cola_list1"></div>
+                            <div className="Topbar_content_cola_list1"></div>
+                            <div className="Topbar_content_cola_list1"></div>
+                            <div className="Topbar_content_cola_list1"></div>
+                            <div className="Topbar_content_cola_list1"></div>
                         </div>
 
+
+                        <div className="Topbar_col2_Leadpopup">
+                            <div className="Topbar_content_colb">
+                                <label className="Topbar_label_head">Leads</label>
+
+                                <div className="Topbar_content_colb_list">
+                                    <div className="Topbar_content_colb_list1">
+                                        <FaCarAlt className="Topbar_caricon" />
+                                        <div className="Tobar_col2_listlead" onClick={(e) => { handleclick(e) }}><label>List Leads</label></div>
+                                    </div>
+                                    <div className="Topbar_content_colb_list1">
+                                        <BsFillBookFill className="Topbar_bookicon" />
+                                        <label>Create Lead</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div className="Topbar_col2_Campaignpopup">
+                            <div className="Topbar_content_colc">
+                                <label className="Topbar_label_head">Campaign</label>
+                                <div className="Topbar_content_colb_list">
+                                    <div className="Topbar_content_colb_list1">
+                                        <BsFillBookFill className="Topbar_bookicon" />
+                                        <div className="Tobar_col2_listcampaign" onClick={(e) => { handleclick(e) }}> <label>List Campaign</label></div>
+                                    </div>
+                                    <div className="Topbar_content_colb_list1">
+                                        <BsFillBookFill className="Topbar_bookicon" />
+                                        <label>Create Campaign</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div className="Topbar_col2_prospectpopup">
+                            <div className="Topbar_content_cold">
+                                <label className="Topbar_label_head">Prospect</label>
+                                <div className="Topbar_content_colb_list">
+                                    <div className="Topbar_content_colb_list1">
+                                        <BsFillBookFill className="Topbar_bookicon" />
+                                        <div className="Tobar_col2_listprospect" onClick={(e) => { handleclick(e) }}><label>List Prospect</label></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                ) : (
+                    <></>
+                )}
+
+
+
         </>
     );
 

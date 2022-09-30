@@ -26,6 +26,7 @@ body{
     margin-left: 10px;
     
 }
+
 .Topbar_col1{
     display: flex;
     flex-direction: row;
@@ -101,42 +102,69 @@ body{
     margin-left: 35px;
 }
 .Topbar_content{
-    background-color: red;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-right: 200px;
 }
 .Topbar_content_cola{
     background-color: white;
     width: 22%;
+    margin-right: 40px;
+   
 }
 .Topbar_content_cola_list{
-    padding: 20px;
+    padding: 30px;
     border: 1px solid rgb(235, 234, 234);
     display: flex;
     align-items: center;
+    
 }
 .Topbar_content_cola_list label{
-    padding-left: 15px;
+    padding-left: 40px;
+    padding-top: 10px;
 }
 .Topbar_content_cola_list1{
     height: 60px;
     border: 1px solid  rgb(235, 234, 234);
+
+    margin-right: 20px;
+   width: 292px;
+   
 }
 .Topbar_content_colb{
     background-color: white;
     padding-left: 100px;
     padding-top: 20px;
     width: 20%;
+   
 }
 .Topbar_label_head{
     font-size: 20px;
 }
 .Topbar_content_colb_list1{
-    padding: 10px 0px;
+    padding: 10px 20px 10px 10px;
+    width: 150px;
+    display: flex;
+    align-items: center;
 }
+.Topbar_caricon{
+    display: flex;
+    position: absolute;
+    
+}
+.Topbar_bookicon{
+    display: flex;
+    position: absolute;
+    padding-right: 20px;
+    padding-top: 3px;
+}
+
 .Topbar_content_colb_list1 label{
-    padding-left: 15px;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: row;
 }
 .Topbar_content_colb_list{
     padding-top: 20px;
@@ -155,4 +183,7 @@ body{
 }
 .Topbar_bookicon{
     color: #C499FF;
+}
+.Topbar_caricon{
+      color: #C499FF;
 }
