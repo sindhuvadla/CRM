@@ -1,7 +1,8 @@
 body{
     margin: 0;
 }
-.header{
+.Topbar_header{
+   
     background-color: #f3f3f4;
     width: 100%;
     padding-top: 10px;
@@ -10,9 +11,9 @@ body{
     display: flex;
     flex-direction: row;
 }
-.icon_circle,
-.Bell_Circle,
-.cancel_circle{
+.Topbar_icon_circle,
+.Topbar_Bell_Circle,
+.Topbar_cancel_circle{
     background-color: white;
     border-radius: 20px;
     height: 30px;
@@ -25,26 +26,27 @@ body{
     margin-left: 10px;
     
 }
-.col1{
+
+.Topbar_col1{
     display: flex;
     flex-direction: row;
 }
-.col1 label{
+.Topbar_col1 label{
     padding-left: 60px;
     padding-top: 5px;
 }
-.col2 ul{
+.Topbar_col2 ul{
     display: flex;
     flex-direction: row;
     margin-left: -30px;
 }
-.col2 ul li{
+.Topbar_col2 ul li{
     padding-top: 5px;
     padding-left: 45px;
     padding-right: 25px;
     list-style-type: none;
 }
-.col3{
+.Topbar_col3{
     width: 280px;
     border-radius: 70px;
     display: flex;
@@ -53,7 +55,7 @@ body{
     background-color: white;
     margin-right: 10px;
 }
-.col3 input{
+.Topbar_col3 input{
     border: none;
     outline: none;
     font-size:9px;
@@ -64,94 +66,124 @@ body{
     width: 170px;
     
 }
-.searchIcon{
+.Topbar_searchIcon{
     font-size: 25px;
         margin-right: 20px;
     
 }
-.col4{
+.Topbar_col4{
     padding-top: 5px;
     margin-left: 20px;
 }
-.profileIcon,
-.BellIcon,
-.cancelIcon{
+.Topbar_profileIcon,
+.Topbar_BellIcon,
+.Topbar_cancelIcon{
     
     color: rgb(109, 109, 109);
 }
 
-.profileIcon{
+.Topbar_profileIcon{
     font-size: 25px;
     font-weight: 50px;
     margin-left: 35px;
     margin-top: 10px;
 }
-.col4 label{
+.Topbar_col4 label{
     margin-left: 10px;
     font-weight: 100px;
 }
-.col5{
+.Topbar_col5{
     padding-top: 3px;
     margin-left: 60px;
     display: flex;
     flex-direction: row;
 }
-.cancel_circle{
+.Topbar_cancel_circle{
     margin-left: 35px;
 }
-.content{
-    background-color: red;
+.Topbar_content{
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-right: 200px;
 }
-.content_cola{
+.Topbar_content_cola{
     background-color: white;
     width: 22%;
+    margin-right: 40px;
+   
 }
-.content_cola_list{
-    padding: 20px;
+.Topbar_content_cola_list{
+    padding: 30px;
     border: 1px solid rgb(235, 234, 234);
     display: flex;
     align-items: center;
+    
 }
-.content_cola_list label{
-    padding-left: 15px;
+.Topbar_content_cola_list label{
+    padding-left: 40px;
+    padding-top: 10px;
 }
-.content_cola_list1{
+.Topbar_content_cola_list1{
     height: 60px;
     border: 1px solid  rgb(235, 234, 234);
+
+    margin-right: 20px;
+   width: 292px;
+   
 }
-.content_colb{
+.Topbar_content_colb{
     background-color: white;
     padding-left: 100px;
     padding-top: 20px;
     width: 20%;
+   
 }
-.label_head{
+.Topbar_label_head{
     font-size: 20px;
 }
-.content_colb_list1{
-    padding: 10px 0px;
+.Topbar_content_colb_list1{
+    padding: 10px 20px 10px 10px;
+    width: 150px;
+    display: flex;
+    align-items: center;
 }
-.content_colb_list1 label{
-    padding-left: 15px;
+.Topbar_caricon{
+    display: flex;
+    position: absolute;
+    
 }
-.content_colb_list{
+.Topbar_bookicon{
+    display: flex;
+    position: absolute;
+    padding-right: 20px;
+    padding-top: 3px;
+}
+
+.Topbar_content_colb_list1 label{
+    padding-left: 35px;
+    display: flex;
+    flex-direction: row;
+}
+.Topbar_content_colb_list{
     padding-top: 20px;
 }
-.content_colc{
+.Topbar_content_colc{
     background-color: white;
     padding-left: 100px;
     padding-top: 20px;
     width: 20%;
 }
-.content_cold{
+.Topbar_content_cold{
     background-color: white;
     padding-left: 100px;
     padding-top: 20px;
     width: 20%;
 }
-.bookicon{
+.Topbar_bookicon{
     color: #C499FF;
+}
+.Topbar_caricon{
+      color: #C499FF;
 }
